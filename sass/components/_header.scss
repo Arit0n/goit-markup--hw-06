@@ -1,33 +1,70 @@
 .header {
+  position: relative;
   background: var(--white-back);
   border-bottom: solid 1px;
   border-color: var(--border-header);
-  padding-top: 24px;
-  padding-bottom: 24px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  @media screen and (min-width: 768px) {
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+  @media screen and (min-width: 1200px) {
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
 }
 .header__container {
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
 }
 .navigation {
   display: flex;
   align-items: center;
 }
 .navigation__btn {
-  display: flex;
+  display: none;
   & > .list-style:not(:last-child) {
     margin-right: 50px;
   }
+  @media screen and (min-width: 768px) {
+    display: flex;
+  }
+  @media screen and (min-width: 1200px) {
+    display: flex;
+  }
 }
 .connection {
-  display: flex;
-  align-items: center;
-  gap: 30px;
+  display: none;
+  @media screen and (min-width: 768px) {
+    display: initial;
+  }
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+  }
 }
 .connection__item {
-  display: flex;
-  align-items: center;
+  @media screen and (min-width: 768px) {
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    align-items: center;
+    &:not(:last-child) {
+      margin-bottom: 0;
+    }
+  }
 }
 .navigation__link {
   position: relative;
@@ -52,8 +89,15 @@
     background: var(--page-color);
     border-radius: 2px;
     transform: translateY(700%);
+    @media screen and (min-width: 768px) {
+      transform: translateY(850%);
+    }
+    @media screen and (min-width: 1200px) {
+      transform: translateY(700%);
+    }
   }
 }
+
 .current {
   color: var(--page-color);
 }
