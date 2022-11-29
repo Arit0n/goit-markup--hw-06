@@ -28,8 +28,8 @@
   position: absolute;
   top: 0;
   position: fixed;
-  width: 100%;
-  height: 100%;
+  width: 100vh;
+  height: 100vh;
   display: flex;
   justify-content: space-between;
   flex-direction: column;
@@ -42,8 +42,6 @@
   @media screen and (min-width: 1200px) {
     display: none;
   }
-}
-.mob-menu__modal .is-hidden {
 }
 .mob-navigation__btn > li:not(:last-child) {
   margin-bottom: 32px;
