@@ -6,7 +6,14 @@
   letter-spacing: 0.03em;
   text-decoration: none;
   color: var(--page-color);
-  margin-right: 93px;
+}
+nav > .logo {
+  @media screen and (min-width: 768px) {
+    margin-right: 88px;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-right: 93px;
+  }
 }
 .logo__header--black {
   color: var(--black-color);

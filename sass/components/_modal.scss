@@ -8,8 +8,8 @@
 }
 .modal {
   position: absolute;
-  height: 581px;
-  width: 528px;
+  height: 609px;
+  width: 450px;
   background: var(--white-back);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -19,6 +19,16 @@
   padding: 40px;
   transform: translate(-50%, -50%) rotate(0);
   transition: transform 300ms linear, border-radius 600ms linear;
+  @media screen and (min-width: 480px) {
+    height: 609px;
+    width: 450px;
+  }
+  @media screen and (min-width: 768px) {
+  }
+  @media screen and (min-width: 1200px) {
+    height: 581px;
+    width: 528px;
+  }
 }
 .modal-back.is-hidden .modal {
   transform: translate(-50%, -50%) rotate(-720deg);
